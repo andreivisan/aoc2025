@@ -1,0 +1,13 @@
+[workspace]
+resolver = "2"
+members = ["crates/*"]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+license = "mit or apache-2.0"
+description = "advent of code 2025 in rust"
+repository = "https://github.com/andreivisan/aoc2025"
+
+[workspace.dependencies]
+aoc-utils = { path = "crates/aoc-utils" }
