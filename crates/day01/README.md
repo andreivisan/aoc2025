@@ -31,15 +31,25 @@ You could follow the instructions, but your recent required official North Pole 
 For example, suppose the attached document contained the following rotations:
 
 L68
+
 L30
+
 R48
+
 L5
+
 R60
+
 L55
+
 L1
+
 L99
+
 R14
+
 L82
+
 Following these rotations would cause the dial to move as follows:
 
 The dial starts by pointing at 50.
