@@ -1,14 +1,21 @@
-pub fn add(left: u64, right: u64) -> u64 {
-    left + right
+use std::{
+    fs::File,
+    io::{BufRead, BufReader,Result},
+    path::Path,
+};
+
+pub fn read_lines_buffered<P>(
+    filename: P
+) -> Result<impl Iterator<Item = Result<String>>>
+where P: AsRef<Path>,
+{
+    let file = File::open(filename)?;
+    let reader = BufReader::new(file);
+    Ok(reader.lines())
 }
 
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
-}
+// #[cfg(test)]
+// mod tests {
+//     use super::*;
+//
+// }
